@@ -245,8 +245,6 @@ color:#B794F4;
 
 </div>
 
-    <div id="sample-view"></div>
-
 
 <button class="backbtn" onclick="backToMenu()">돌아가기</button>
 
@@ -327,7 +325,7 @@ if(cols.length >=4){
 
 html += `
 
-<div onclick="showSample('${cols[0]}','${cols[4]}')" style="width:220px; border:1px solid #ddd; padding:10px; text-align:center; cursor:pointer;">
+<div style="width:220px; border:1px solid #ddd; padding:10px; text-align:center;">
 
 <img src="images/${cols[3]}" style="width:100%;">
 
@@ -351,24 +349,6 @@ document.getElementById("product-list").innerHTML = html;
 
 
 });
-
-    function showSample(name, images){
-
-let files = images.split(";");
-
-let html = "<h3>" + name + " 샘플</h3>";
-
-files.forEach(function(file){
-
-html += `
-<img src="images/${file}" style="width:200px; margin:10px;">
-`;
-
-});
-
-document.getElementById("sample-view").innerHTML = html;
-
-}
 
 </script>
 
